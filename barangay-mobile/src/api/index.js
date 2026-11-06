@@ -139,6 +139,20 @@ export const publicApi = {
   },
 };
 
+/* ------------------------------------------------- document requests */
+
+export const documentRequests = {
+  list(params) {
+    return get('/document-requests', params);
+  },
+  getById(id) {
+    return get(`/document-requests/${id}`);
+  },
+  create(fields) {
+    return post('/document-requests', fields);
+  },
+};
+
 /* -------------------------------------------------------------- profile */
 
 export const profile = {
@@ -165,6 +179,7 @@ export default {
   about,
   publicApi,
   profile,
+  documentRequests,
   resolveFileUrl,
   url: P,
 };

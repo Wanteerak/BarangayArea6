@@ -3,6 +3,7 @@ import { StyleSheet, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../screens/HomeScreen';
+import RequestsScreen from '../screens/RequestsScreen';
 import MyComplaintsScreen from '../screens/MyComplaintsScreen';
 import EmergencyScreen from '../screens/EmergencyScreen';
 import CommunityScreen from '../screens/CommunityScreen';
@@ -13,6 +14,7 @@ const Tab = createBottomTabNavigator();
 
 const ICONS = {
   Home: '🏠',
+  Requests: '📑',
   Complaints: '📝',
   Emergency: '🚨',
   Community: '📢',
@@ -36,6 +38,7 @@ export default function MainTabs() {
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Requests" component={RequestsScreen} />
       <Tab.Screen name="Complaints" component={MyComplaintsScreen} />
       <Tab.Screen name="Emergency" component={EmergencyScreen} />
       <Tab.Screen name="Community" component={CommunityScreen} />

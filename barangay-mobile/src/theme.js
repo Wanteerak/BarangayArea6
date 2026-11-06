@@ -53,9 +53,11 @@ export function statusColors(status) {
     case 'Ongoing':
     case 'Processing':
     case 'Approved':
+    case 'ReadyForPickup':
       return { text: colors.info, background: colors.infoSoft };
     case 'Resolved':
     case 'Active':
+    case 'Released':
       return { text: colors.success, background: colors.successSoft };
     case 'Rejected':
     case 'Declined':
