@@ -3,6 +3,7 @@ using MyApp.Application.Dtos.Announcements;
 using MyApp.Application.Dtos.Auth;
 using MyApp.Application.Dtos.Complaints;
 using MyApp.Application.Dtos.Dashboard;
+using MyApp.Application.Dtos.Documents;
 using MyApp.Application.Dtos.Emergencies;
 using MyApp.Application.Dtos.Households;
 using MyApp.Application.Dtos.Operations;
@@ -89,6 +90,16 @@ public interface IAnnouncementService
     Task<AnnouncementDto> UpdateAsync(int id, UpdateAnnouncementRequest request, CancellationToken ct = default);
     Task<AnnouncementDto> SetPublishedAsync(int id, bool isPublished, CancellationToken ct = default);
     Task DeleteAsync(int id, CancellationToken ct = default);
+}
+
+public interface IDocumentRequestService
+{
+    Task<PagedResult<DocumentRequestDto>> GetPagedAsync(SearchQuery query, CancellationToken ct = default);
+    Task<DocumentRequestDto> GetByIdAsync(int id, CancellationToken ct = default);
+    Task<DocumentRequestDto> CreateAsync(CreateDocumentRequestRequest request, int userId, CancellationToken ct = default);
+    Task<DocumentRequestDto> UpdateStatusAsync(int id, UpdateDocumentRequestStatusRequest request, int actingUserId, CancellationToken ct = default);
+    Task DeleteAsync(int id, CancellationToken ct = default);
+    Task<DocumentRequestStatsDto> GetStatsAsync(CancellationToken ct = default);
 }
 
 public interface IDashboardService

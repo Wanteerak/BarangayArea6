@@ -22,6 +22,7 @@ public interface IApplicationDbContext
     IQueryable<DutyRoster> DutyRosters { get; }
     IQueryable<AboutInfo> AboutInfos { get; }
     IQueryable<PasswordResetCode> PasswordResetCodes { get; }
+    IQueryable<DocumentRequest> DocumentRequests { get; }
 
     void Add<TEntity>(TEntity entity) where TEntity : class;
     void AddRange<TEntity>(IEnumerable<TEntity> entities) where TEntity : class;

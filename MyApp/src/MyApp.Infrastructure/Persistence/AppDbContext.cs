@@ -26,6 +26,7 @@ public class AppDbContext : DbContext, IApplicationDbContext
     public DbSet<DutyRoster> DutyRosters => Set<DutyRoster>();
     public DbSet<AboutInfo> AboutInfos => Set<AboutInfo>();
     public DbSet<PasswordResetCode> PasswordResetCodes => Set<PasswordResetCode>();
+    public DbSet<DocumentRequest> DocumentRequests => Set<DocumentRequest>();
 
     IQueryable<User> IApplicationDbContext.Users => Users.AsQueryable();
     IQueryable<Household> IApplicationDbContext.Households => Households.AsQueryable();
@@ -40,6 +41,7 @@ public class AppDbContext : DbContext, IApplicationDbContext
     IQueryable<DutyRoster> IApplicationDbContext.DutyRosters => DutyRosters.AsQueryable();
     IQueryable<AboutInfo> IApplicationDbContext.AboutInfos => AboutInfos.AsQueryable();
     IQueryable<PasswordResetCode> IApplicationDbContext.PasswordResetCodes => PasswordResetCodes.AsQueryable();
+    IQueryable<DocumentRequest> IApplicationDbContext.DocumentRequests => DocumentRequests.AsQueryable();
 
     void IApplicationDbContext.Add<TEntity>(TEntity entity) => Set<TEntity>().Add(entity);
     void IApplicationDbContext.AddRange<TEntity>(IEnumerable<TEntity> entities) => Set<TEntity>().AddRange(entities);
@@ -263,6 +265,33 @@ public class AppDbContext : DbContext, IApplicationDbContext
             e.ToTable("password_reset_codes");
             e.HasIndex(x => x.UserId);
             e.Property(x => x.CodeHash).HasMaxLength(128).IsRequired();
+        });
+
+        // ---------- DocumentRequest ----------
+        b.Entity<DocumentRequest>(e =>
+        {
+            e.ToTable("document_requests");
+            e.HasIndex(x => x.Status);
+            e.HasIndex(x => x.UserId);
+            e.HasIndex(x => x.CreatedAt);
+            e.HasIndex(x => x.ReferenceNumber).IsUnique();
+
+            e.Property(x => x.ReferenceNumber).HasMaxLength(50).IsRequired();
+            // Free text uses MySQL TEXT so the row stays under the 65535-byte limit.
+            e.Property(x => x.Purpose).HasColumnType("text").IsRequired();
+            e.Property(x => x.AdminRemarks).HasColumnType("text");
+            e.Property(x => x.DocumentType).HasConversion<string>().HasMaxLength(30);
+            e.Property(x => x.Status).HasConversion<string>().HasMaxLength(20);
+
+            e.HasOne(x => x.User)
+                .WithMany()
+                .HasForeignKey(x => x.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            e.HasOne(x => x.ProcessedBy)
+                .WithMany()
+                .HasForeignKey(x => x.ProcessedByUserId)
+                .OnDelete(DeleteBehavior.SetNull);
         });
     }
 

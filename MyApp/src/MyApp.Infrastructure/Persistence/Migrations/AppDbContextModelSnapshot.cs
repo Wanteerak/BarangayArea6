@@ -289,6 +289,70 @@ namespace MyApp.Infrastructure.Persistence.Migrations
                     b.ToTable("daily_operations", (string)null);
                 });
 
+            modelBuilder.Entity("MyApp.Domain.Entities.DocumentRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AdminRemarks")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("DocumentType")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<DateTime?>("ProcessedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int?>("ProcessedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Purpose")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ReferenceNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<DateTime?>("ReleasedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedAt");
+
+                    b.HasIndex("ProcessedByUserId");
+
+                    b.HasIndex("ReferenceNumber")
+                        .IsUnique();
+
+                    b.HasIndex("Status");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("document_requests", (string)null);
+                });
+
             modelBuilder.Entity("MyApp.Domain.Entities.DutyRoster", b =>
                 {
                     b.Property<int>("Id")
@@ -819,6 +883,24 @@ namespace MyApp.Infrastructure.Persistence.Migrations
                     b.Navigation("AssignedStaff");
 
                     b.Navigation("CreatedBy");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.DocumentRequest", b =>
+                {
+                    b.HasOne("MyApp.Domain.Entities.User", "ProcessedBy")
+                        .WithMany()
+                        .HasForeignKey("ProcessedByUserId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("MyApp.Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ProcessedBy");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("MyApp.Domain.Entities.DutyRoster", b =>
