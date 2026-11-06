@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net" version="26.0.0">
+  <diagram name="G-Level0-Context" id="g-l0">
+    <mxGraphModel dx="900" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Appendix G: Data Flow Diagram — Level 0 (Context)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="150" y="10" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;Barangay Management&lt;br&gt;Information System&lt;/b&gt;&lt;br&gt;(website + resident app + admin)&lt;br&gt;0&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="300" y="380" width="230" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ext1" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;Public Visitor&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext2" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;Resident&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="640" y="120" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext3" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;Admin / Staff&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="40" y="660" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext4" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;BDRRMC / Responders&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="640" y="660" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" value="&lt;font face=&quot;Times New Roman&quot;&gt;View features, FAQs, advisories, hotlines, directory&lt;/font&gt;" edge="1" parent="1" source="sys" target="ext1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;fontSize=10;endArrow=open;startArrow=open;" />
+        <mxCell id="f2" value="&lt;font face=&quot;Times New Roman&quot;&gt;Sign in, submit concern, report incident, track reports&lt;/font&gt;" edge="1" parent="1" source="ext2" target="sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;fontSize=10;endArrow=open;startArrow=open;" />
+        <mxCell id="f3" value="&lt;font face=&quot;Times New Roman&quot;&gt;Manage residents, complaints, rescue, operations, accounts&lt;/font&gt;" edge="1" parent="1" source="ext3" target="sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;fontSize=10;endArrow=open;startArrow=open;" />
+        <mxCell id="f4" value="&lt;font face=&quot;Times New Roman&quot;&gt;SOS dispatch, evacuation, broadcasts, rescue assets&lt;/font&gt;" edge="1" parent="1" source="sys" target="ext4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;fontSize=10;endArrow=open;startArrow=open;" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="G-Level1" id="g-l1">
+    <mxGraphModel dx="1100" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Appendix G: Data Flow Diagram — Level 1&lt;/b&gt;&lt;/font&gt;" style="text;html=1;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="380" y="8" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;1.0&lt;/b&gt;&lt;br&gt;Sign in&lt;br&gt;resident + staff&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;2.0&lt;/b&gt;&lt;br&gt;Serve website&lt;br&gt;public content&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="280" y="60" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;3.0&lt;/b&gt;&lt;br&gt;Process concerns&lt;br&gt;+ inbox&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="500" y="60" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;4.0&lt;/b&gt;&lt;br&gt;Command fire&lt;br&gt;&amp; rescue&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="720" y="60" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;5.0&lt;/b&gt;&lt;br&gt;Log operations&lt;br&gt;+ directory&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="930" y="60" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;D1&lt;/b&gt; users + residents&lt;/font&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;D2&lt;/b&gt; complaints + inbox&lt;/font&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="320" y="200" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;D3&lt;/b&gt; incidents + evacuation&lt;/font&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="580" y="200" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d4" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;D4&lt;/b&gt; operations + officials&lt;/font&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="860" y="200" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="x1" value="&lt;font face=&quot;Times New Roman&quot;&gt;Public Visitor&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="60" y="330" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="x2" value="&lt;font face=&quot;Times New Roman&quot;&gt;Resident&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="330" y="330" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="x3" value="&lt;font face=&quot;Times New Roman&quot;&gt;Admin / Staff&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="600" y="330" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="x4" value="&lt;font face=&quot;Times New Roman&quot;&gt;BDRRMC&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="870" y="330" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="f01" value="&lt;font face=&quot;Times New Roman&quot;&gt;credentials&lt;/font&gt;" edge="1" parent="1" source="x2" target="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;" />
+        <mxCell id="f02" edge="1" parent="1" source="p1" target="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=open;" />
+        <mxCell id="f03" value="&lt;font face=&quot;Times New Roman&quot;&gt;view website&lt;/font&gt;" edge="1" parent="1" source="x1" target="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;" />
+        <mxCell id="f04" edge="1" parent="1" source="p2" target="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=open;dashed=1;" />
+        <mxCell id="f06" value="&lt;font face=&quot;Times New Roman&quot;&gt;submit + track&lt;/font&gt;" edge="1" parent="1" source="x2" target="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;" />
+        <mxCell id="f07" edge="1" parent="1" source="p3" target="d2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=open;startArrow=open;" />
+        <mxCell id="f08" value="&lt;font face=&quot;Times New Roman&quot;&gt;act on inbox&lt;/font&gt;" edge="1" parent="1" source="x3" target="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;" />
+        <mxCell id="f09" value="&lt;font face=&quot;Times New Roman&quot;&gt;SOS report&lt;/font&gt;" edge="1" parent="1" source="x2" target="p4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;" />
+        <mxCell id="f10" edge="1" parent="1" source="p4" target="d3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=open;startArrow=open;" />
+        <mxCell id="f11" value="&lt;font face=&quot;Times New Roman&quot;&gt;dispatch&lt;/font&gt;" edge="1" parent="1" source="x4" target="p4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;" />
+        <mxCell id="f12" value="&lt;font face=&quot;Times New Roman&quot;&gt;log + publish&lt;/font&gt;" edge="1" parent="1" source="x3" target="p5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;startArrow=open;" />
+        <mxCell id="f13" edge="1" parent="1" source="p5" target="d4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=open;startArrow=open;" />
+        <mxCell id="f14" value="&lt;font face=&quot;Times New Roman&quot;&gt;staff login&lt;/font&gt;" edge="1" parent="1" source="x3" target="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;dashed=1;" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

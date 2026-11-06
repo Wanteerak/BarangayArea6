@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" version="26.0.0">
+  <diagram name="F-ERD-andy_mis" id="f-erd">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Appendix F: Entity Relationship Diagram — andy_mis (MySQL)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="330" y="8" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e_users" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;users&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;name&lt;br&gt;email&lt;br&gt;password&lt;br&gt;is_admin&lt;br&gt;staff_access&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="20" y="50" width="150" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="e_res" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;residents&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;firstName&lt;br&gt;lastName&lt;br&gt;purok&lt;br&gt;householdId&lt;br&gt;sectorTags&lt;br&gt;emergencyContact&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="195" y="50" width="150" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="e_comp" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;complaints&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;complaintNumber&lt;br&gt;status&lt;br&gt;complainantIds FK&lt;br&gt;respondentIds FK&lt;br&gt;assignedOfficer FK&lt;br&gt;actionLogs&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="370" y="50" width="165" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inc" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;emergency_incidents&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;incidentCode&lt;br&gt;severity&lt;br&gt;status&lt;br&gt;assignedUnit FK&lt;br&gt;evacuationCenter FK&lt;br&gt;equipmentUsed FK&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="560" y="50" width="190" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="e_evac" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;evacuation_centers&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;name&lt;br&gt;purok&lt;br&gt;capacityPersons&lt;br&gt;currentOccupants&lt;br&gt;status&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="775" y="50" width="165" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="e_alert" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;emergency_alerts&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;alertTitle&lt;br&gt;alertLevel&lt;br&gt;affectedPuroks&lt;br&gt;issuedBy&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="965" y="50" width="155" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="e_resp" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;rescue_responders&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;name&lt;br&gt;callsign&lt;br&gt;role&lt;br&gt;status&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="20" y="235" width="150" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ops" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;operation_logs&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;logDate&lt;br&gt;shift&lt;br&gt;officerInCharge&lt;br&gt;dutyTanods&lt;br&gt;summary&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="195" y="235" width="150" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="e_vis" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;visitor_logs&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;visitorName&lt;br&gt;purpose&lt;br&gt;timeIn / timeOut&lt;br&gt;attendedBy&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="370" y="235" width="165" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="e_eq" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;equipment_items&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;assetCode&lt;br&gt;itemName&lt;br&gt;availableQuantity&lt;br&gt;status&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="560" y="235" width="190" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="e_off" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;officials&lt;/b&gt;&lt;br&gt;id PK&lt;br&gt;name&lt;br&gt;position&lt;br&gt;contactNumber&lt;br&gt;term&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="775" y="235" width="165" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bdrrm" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;bdrrm_advisories&lt;/b&gt;&lt;br&gt;id PK (main_advisory)&lt;br&gt;alertLevel&lt;br&gt;advisoryTitle&lt;br&gt;hotlines&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;align=left;spacing=4" vertex="1" parent="1">
+          <mxGeometry x="965" y="235" width="155" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;font face=&quot;Times New Roman&quot;&gt;files&lt;/font&gt;" edge="1" parent="1" source="e_res" target="e_comp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;startArrow=oval;" />
+        <mxCell id="r2" value="&lt;font face=&quot;Times New Roman&quot;&gt;handles&lt;/font&gt;" edge="1" parent="1" source="e_off" target="e_comp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;dashed=1;" />
+        <mxCell id="r3" value="&lt;font face=&quot;Times New Roman&quot;&gt;evacuates&lt;/font&gt;" edge="1" parent="1" source="e_inc" target="e_evac" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;" />
+        <mxCell id="r4" value="&lt;font face=&quot;Times New Roman&quot;&gt;uses&lt;/font&gt;" edge="1" parent="1" source="e_inc" target="e_eq" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;dashed=1;" />
+        <mxCell id="r5" value="&lt;font face=&quot;Times New Roman&quot;&gt;responds&lt;/font&gt;" edge="1" parent="1" source="e_resp" target="e_inc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;dashed=1;" />
+        <mxCell id="r6" value="&lt;font face=&quot;Times New Roman&quot;&gt;manages&lt;/font&gt;" edge="1" parent="1" source="e_users" target="e_res" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;fontFamily=Times New Roman;endArrow=open;" />
+        <mxCell id="n" value="&lt;font face=&quot;Times New Roman&quot;&gt;Note: PK = string id. JSON columns (complainantIds, equipmentUsed, hotlines) hold logical FK links; no formal DB-level FK. MariaDB compatible.&lt;/font&gt;" style="text;html=1;fontFamily=Times New Roman;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="395" width="1100" height="25" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
