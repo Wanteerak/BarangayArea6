@@ -96,6 +96,16 @@ export const announcements = {
   remove: (id) => del(`/announcements/${id}`),
 };
 
+/* ------------------------- Document Requests ----------------------- */
+
+export const documentRequests = {
+  list: (params) => get('/document-requests', params),
+  get: (id) => get(`/document-requests/${id}`),
+  setStatus: (id, payload) => put(`/document-requests/${id}/status`, payload),
+  remove: (id) => del(`/document-requests/${id}`),
+  stats: () => get('/document-requests/stats'),
+};
+
 /* ------------------------------ Dashboard -------------------------- */
 
 export const dashboard = {
@@ -171,6 +181,7 @@ export const api = {
   dutyRoster,
   about,
   profile,
+  documentRequests,
   publicApi,
 };
 

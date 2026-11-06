@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ForgotPassword from './pages/ForgotPassword';
 import Dashboard from './pages/Dashboard';
+import DocumentRequests from './pages/DocumentRequests';
 import Staff from './pages/Staff';
 import Accounts from './pages/Accounts';
 import Households from './pages/Households';
@@ -59,6 +60,7 @@ export default function App() {
             >
               <Route index element={<HomeRedirect />} />
               <Route path="/dashboard" element={<ProtectedRoute roles={STAFF}><Dashboard /></ProtectedRoute>} />
+            <Route path="/document-requests" element={<ProtectedRoute roles={STAFF}><DocumentRequests /></ProtectedRoute>} />
               <Route path="/complaints" element={<Complaints />} />
               <Route path="/emergencies" element={<ProtectedRoute roles={STAFF}><Emergencies /></ProtectedRoute>} />
               <Route path="/operations" element={<ProtectedRoute roles={STAFF}><Operations /></ProtectedRoute>} />

@@ -664,6 +664,16 @@ input[type='checkbox'] {
   color: var(--danger);
   border-color: #f0c3bb;
 }
+.badge-ready-for-pickup {
+  background: var(--info-soft);
+  color: var(--info);
+  border-color: #b6e2e8;
+}
+.badge-released {
+  background: var(--success-soft);
+  color: var(--success);
+  border-color: #bfe6cd;
+}
 .badge-admin {
   background: var(--primary-soft);
   color: var(--primary-dark);

@@ -16,6 +16,7 @@ export default function AppLayout() {
 
   const navItems = [
     { to: '/dashboard', label: 'Dashboard', roles: ['Admin', 'HeadAdmin'], icon: '📊' },
+    { to: '/document-requests', label: 'Document Requests', roles: ['Admin', 'HeadAdmin'], icon: '📑' },
     { to: '/complaints', label: isResident ? 'My Complaints' : 'Complaints', roles: null, icon: '📝' },
     { to: '/emergencies', label: 'Emergencies', roles: ['Admin', 'HeadAdmin'], icon: '🚨' },
     { to: '/operations', label: 'Daily Operations', roles: ['Admin', 'HeadAdmin'], icon: '🧹' },
