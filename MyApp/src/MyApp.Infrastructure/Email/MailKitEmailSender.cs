@@ -1,4 +1,4 @@
-using MailKit.Net.Smtp;
+﻿using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -99,7 +99,7 @@ public class MailKitEmailSender : IEmailSender
         <body style="margin:0;padding:24px;background:#f6f7f9;font-family:Segoe UI,Arial,sans-serif;color:#1f2937">
           <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:12px;padding:28px;border:1px solid #e5e7eb">
             <div style="font-size:13px;color:#6b7280;margin-bottom:16px">
-              Barangay San Jose Annex Area 6 &middot; Rodriguez, Rizal
+              Barangay San Jose &middot; Rodriguez, Rizal
             </div>
             {innerHtml}
             <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0">

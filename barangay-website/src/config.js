@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
  * Barangay Management Information System - WEBSITE CONFIGURATION
  * =============================================================================
  *
@@ -32,7 +32,7 @@ window.APP_CONFIG = {
 
   /* -------------------------------------------------------- Identity / SEO */
   appName: 'Barangay Management Information System',
-  barangayName: 'Barangay San Jose Annex Area 6',
+  barangayName: 'Barangay San Jose',
   municipality: 'Rodriguez, Rizal',
 
   /* ------------------------------------------------------------- Downloads */
@@ -49,7 +49,7 @@ window.APP_CONFIG = {
 
   /* ---------------------------------------------------- Contact and office */
   // TODO: replace these placeholders with the real barangay details.
-  contactEmail: 'barangay.area6@example.com',
+  contactEmail: 'brgy.sanjose@example.com',
   contactNumber: '(02) 8123-4567',
   officeHours: 'Monday to Friday, 8:00 AM - 5:00 PM',
   facebookUrl: '',               // e.g. 'https://www.facebook.com/yourbarangay'

@@ -1,9 +1,9 @@
-namespace MyApp.Shared.Constants;
+﻿namespace MyApp.Shared.Constants;
 
 public static class AppConstants
 {
     public const string AppName = "Barangay Management Information System";
-    public const string DefaultBarangay = "Barangay San Jose Annex Area 6";
+    public const string DefaultBarangay = "Barangay San Jose";
     public const string DefaultMunicipality = "Rodriguez, Rizal";
 
     /// <summary>Relative folder (under wwwroot) where uploaded images are stored.</summary>

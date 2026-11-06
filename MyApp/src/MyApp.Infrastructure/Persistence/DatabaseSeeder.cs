@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MyApp.Application.Common.Interfaces;
@@ -87,9 +87,9 @@ public static class DatabaseSeeder
             Id = 1,
             BarangayName = "Barangay San Jose Annex Area 6",
             Municipality = "Rodriguez, Rizal",
-            Mission = "To deliver fast, fair and caring public service to every resident of Barangay San Jose Annex Area 6 through transparent governance, peace and order, and prompt emergency response.",
+            Mission = "To deliver fast, fair and caring public service to every resident of Barangay San Jose through transparent governance, peace and order, and prompt emergency response.",
             Vision = "A safe, united, clean and progressive community where every family is heard, protected and empowered.",
-            History = "The Barangay Management Information System was developed to digitize resident records, complaint handling and emergency response for Barangay San Jose Annex Area 6.",
+            History = "The Barangay Management Information System was developed to digitize resident records, complaint handling and emergency response for Barangay San Jose.",
             ContactEmail = "brgy.sanjosearea6@example.com",
             ContactNumber = "(02) 8000-0000",
             OfficeHours = "Monday to Friday, 8:00 AM - 5:00 PM",
@@ -161,8 +161,8 @@ public static class DatabaseSeeder
             var today = DateOnly.FromDateTime(DateTime.UtcNow);
             db.DutyRosters.AddRange(
                 new DutyRoster { Date = today, Shift = DutyShift.Day, AssignedDuty = "Barangay Hall Front Desk", Area = "Barangay Hall", PersonnelName = "Maria Santos", Position = "Barangay Secretary", TimeRange = "08:00 - 17:00", UserId = secretaryId, CreatedAt = DateTime.UtcNow },
-                new DutyRoster { Date = today, Shift = DutyShift.Day, AssignedDuty = "Peace and Order Patrol", Area = "Purok 1 - Area 6", PersonnelName = "Ana Bautista", Position = "Kagawad - Peace and Order", TimeRange = "08:00 - 20:00", CreatedAt = DateTime.UtcNow },
-                new DutyRoster { Date = today, Shift = DutyShift.Night, AssignedDuty = "Night Patrol", Area = "Purok 2 - Area 6", PersonnelName = "Jose Villanueva", Position = "Kagawad - Health", TimeRange = "20:00 - 05:00", CreatedAt = DateTime.UtcNow },
+                new DutyRoster { Date = today, Shift = DutyShift.Day, AssignedDuty = "Peace and Order Patrol", Area = "Purok 1", PersonnelName = "Ana Bautista", Position = "Kagawad - Peace and Order", TimeRange = "08:00 - 20:00", CreatedAt = DateTime.UtcNow },
+                new DutyRoster { Date = today, Shift = DutyShift.Night, AssignedDuty = "Night Patrol", Area = "Purok 2", PersonnelName = "Jose Villanueva", Position = "Kagawad - Health", TimeRange = "20:00 - 05:00", CreatedAt = DateTime.UtcNow },
                 new DutyRoster { Date = today, Shift = DutyShift.WholeDay, AssignedDuty = "Overall Supervision", Area = "Barangay-wide", PersonnelName = "Hon. Juan Dela Cruz", Position = "Barangay Captain", TimeRange = "Whole day", UserId = captainId, CreatedAt = DateTime.UtcNow });
             await db.SaveChangesAsync(ct);
             logger.LogInformation("Seeded today's duty roster.");
@@ -173,7 +173,7 @@ public static class DatabaseSeeder
             var household = new Household
             {
                 HouseholdNumber = "A6-0001",
-                Address = "12 Mabini Street, Area 6",
+                Address = "12 Mabini Street",
                 Purok = "Purok 1",
                 HeadOfFamily = "Pedro Reyes",
                 ContactNumber = "09170000000",
@@ -194,7 +194,7 @@ public static class DatabaseSeeder
         {
             db.Announcements.Add(new Announcement
             {
-                Title = "Welcome to the Barangay Area 6 app",
+                Title = "Welcome to the Barangay San Jose app",
                 Body = "You can now file complaints and request emergency rescue directly from your phone. Please make sure your account is approved and your valid ID is on file.",
                 IsPublished = true,
                 CreatedByUserId = uid,

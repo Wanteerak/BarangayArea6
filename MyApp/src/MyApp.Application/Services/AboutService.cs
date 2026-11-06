@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MyApp.Application.Common.Helpers;
 using MyApp.Application.Common.Interfaces;
 using MyApp.Application.Common.Mapping;
@@ -28,7 +28,7 @@ public class AboutService : IAboutService
         var info = await _db.AboutInfos.AsNoTracking().FirstOrDefaultAsync(a => a.Id == 1, ct);
         return info?.ToDto() ?? new AboutInfoDto
         {
-            BarangayName = "Barangay San Jose Annex Area 6",
+            BarangayName = "Barangay San Jose",
             Municipality = "Rodriguez, Rizal",
             Mission = "To deliver fast, fair and caring public service to every resident through transparent governance, peace and order, and prompt emergency response.",
             Vision = "A safe, united, clean and progressive community where every family is heard, protected and empowered."

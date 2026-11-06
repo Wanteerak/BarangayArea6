@@ -1,5 +1,5 @@
-// Single source of truth for the mobile app.
-// See docs/CONFIG.md — nothing else should hard-code a URL, barangay name,
+﻿// Single source of truth for the mobile app.
+// See docs/CONFIG.md â€” nothing else should hard-code a URL, barangay name,
 // or download link.
 //
 // NOTE: This address is baked into the APK at build time. Phones cannot
@@ -9,7 +9,7 @@ export const config = {
   apiBaseUrl: 'http://192.168.100.48:5080/api',
   fileBaseUrl: 'http://192.168.100.48:5080', // for /uploads/... paths
   appName: 'Barangay Management Information System',
-  barangayName: 'Barangay San Jose Annex Area 6',
+  barangayName: 'Barangay San Jose',
   municipality: 'Rodriguez, Rizal',
   androidDownloadUrl: '',
   iosDownloadUrl: '',

@@ -1,4 +1,4 @@
-using System.Text.Json;
+﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -105,7 +105,7 @@ builder.Services.AddSwaggerGen(options =>
     {
         Title = "Barangay Management Information System API",
         Version = "v1",
-        Description = "Barangay San Jose Annex Area 6 - Rodriguez, Rizal"
+        Description = "Barangay San Jose - Rodriguez, Rizal"
     });
 
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

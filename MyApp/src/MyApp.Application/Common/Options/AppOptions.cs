@@ -1,4 +1,4 @@
-namespace MyApp.Application.Common.Options;
+﻿namespace MyApp.Application.Common.Options;
 
 public class AuthOptions
 {
@@ -36,7 +36,7 @@ public class EmailOptions
     public string Host { get; set; } = "smtp.gmail.com";
     public int Port { get; set; } = 587;
     public bool UseStartTls { get; set; } = true;
-    public string SenderName { get; set; } = "Barangay Area 6";
+    public string SenderName { get; set; } = "Barangay San Jose";
     public string SenderEmail { get; set; } = string.Empty;
 
     /// <summary>Gmail app password (16 characters, spaces allowed).</summary>
